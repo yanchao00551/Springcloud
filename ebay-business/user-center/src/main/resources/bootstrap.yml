@@ -7,7 +7,7 @@ spring:
   cloud:
     config:
       profile: dev
-      uri: http://localhost:8888/
+      uri: http://ebay-config-server
 
 #service discovery url
 eureka:

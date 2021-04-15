@@ -14,3 +14,13 @@ spring:
           username: 10947@163.com
           password: BorisPYTHON254
           searchPaths: ebay-config-repo
+
+#service discovery url
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    service-url:
+      defaultZone: http://user:123@localhost:8260/eureka
