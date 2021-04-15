@@ -1,5 +1,5 @@
 server:
-  port:8089
+  port: 8089
 
 # 设置服务器名称
 spring:
