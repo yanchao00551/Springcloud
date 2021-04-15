@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+# 设置服务器名称为ebay-config-server
+spring:
+  application:
+    name: ebay-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:yanchao00551/Springcloud.git   # 设置仓库地址
+          username: 10947@163.com
+          password: BorisPYTHON254
+          searchPaths: ebay-config-repo
