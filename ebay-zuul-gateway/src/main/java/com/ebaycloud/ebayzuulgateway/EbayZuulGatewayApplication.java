@@ -7,9 +7,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableZuulProxy
 @SpringBootApplication
 public class EbayZuulGatewayApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(EbayZuulGatewayApplication.class, args);
     }
-
 }

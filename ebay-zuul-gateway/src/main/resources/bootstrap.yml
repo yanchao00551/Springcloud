@@ -9,8 +9,14 @@ spring:
       profile: dev
       uri: http://localhost:8888/
 
+
+
 #service discovery url
 eureka:
   client:
+    register-with-eureka: false
+    fetch-registry: false 
     service-url:
       defaultZone: http://localhost:8260/eureka
+
+
