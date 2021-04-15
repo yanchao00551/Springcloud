@@ -11,4 +11,4 @@ feign:
 #dev 环境下使用MySQL
 
 #覆盖默认的属性值配置
-foo=I'development value
+foo: I'development value
