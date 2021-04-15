@@ -5,4 +5,4 @@ logging:
 #正式环境所使用的MySQL的数据库配置
 
 #其他属性值配置
-foo=I'm default value
+foo: I'm default value

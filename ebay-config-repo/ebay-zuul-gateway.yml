@@ -7,4 +7,4 @@ logging:
 
 
 #其他属性值配置
-foo=I'm default value
+foo: I'm default value
