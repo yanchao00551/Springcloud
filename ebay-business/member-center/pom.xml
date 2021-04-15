@@ -14,6 +14,7 @@
     <artifactId>member-center</artifactId>
     <name>member-center</name>
     <description>member center</description>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>1.8</java.version>

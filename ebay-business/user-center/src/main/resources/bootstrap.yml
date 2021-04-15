@@ -1,0 +1,16 @@
+server:
+  port: 2100
+
+spring:
+  application.name: user-center
+
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:8888/
+
+#service discovery url
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8260/eureka

@@ -21,7 +21,7 @@
         <module>ebay-config-server</module>
         <module>ebay-zuul-gateway</module>
         <module>ebay-business</module>
-        
+        <module>ebay-hystrix-dashboard</module>
     </modules>
 
 

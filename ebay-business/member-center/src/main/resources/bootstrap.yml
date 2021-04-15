@@ -1,0 +1,16 @@
+server:
+  port: 2200
+
+spring:
+  application.name: member-center
+
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:8888/
+
+#service discovery url
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8260/eureka

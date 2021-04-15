@@ -12,6 +12,12 @@
     <artifactId>ebay-business</artifactId>
     <name>ebay-business</name>
     <description>business</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>member-center</module>
+        <module>user-center</module>
+    </modules>
 
     <dependencies>
         <!-- springboot2.x  Eureka客户端 -->
@@ -19,10 +25,38 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
+        <!-- 配置中心客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+        <!-- Feign 负载均衡调度器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- 服务健康状态检测 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- ribbon负载均衡 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+
+        <!-- 熔断 服务降级 器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
     </dependencies>
-    <modules>
-        <module>member-center</module>
-        <module>user-center</module>
-    </modules>
+
 
 </project>
