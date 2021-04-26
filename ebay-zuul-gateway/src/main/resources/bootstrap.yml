@@ -19,4 +19,5 @@ eureka:
     service-url:
       defaultZone: http://user:123@localhost:8260/eureka
 
-
+zuul:
+  sensitive-headers: Cookie,Set-Cookie

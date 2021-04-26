@@ -1,0 +1,27 @@
+server:
+  port: 2300
+
+# 设置服务器名称
+spring:
+  application:
+    name: ebay-security-oauth
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://user:123@localhost:8260/eureka
+
+
+
+#日志访问级别
+logging:
+  level:
+    org:
+      springframework: INFO
+

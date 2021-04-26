@@ -16,3 +16,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://user:123@localhost:8260/eureka
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:2300/user/info

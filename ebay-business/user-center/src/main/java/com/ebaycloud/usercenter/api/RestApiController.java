@@ -1,5 +1,6 @@
-package com.ebaycloud.membercenter.api;
+package com.ebaycloud.usercenter.api;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,11 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
  * @email: 10947@163.com
  */
 @RestController
-@RequestMapping(value = "/member")
+@RequestMapping(value = "/user")
 public class RestApiController {
 
+    @PreAuthorize("hasRole('ADMIN')")
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public String getUserById(@PathVariable String id){
-        return "member: " + id;
+        return "user: " + id;
     }
 }
