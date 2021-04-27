@@ -14,6 +14,9 @@
     <description>eureka server</description>
     <packaging>jar</packaging>
 
+    <properties>
+        <docker.image.prefix>yanchao</docker.image.prefix>
+    </properties>
 
     <dependencies>
 
@@ -38,6 +41,34 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <!-- Docker构建工具 -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.10</version>
+                <!-- 放开这块注释，则运行mvn deploy命令就会打包镜像 -->
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <!-- 如果package时不想用docker打包,就注释掉这个goal -->
+                        <goals>
+                            <!--<goal>build</goal>-->
+                            <!--<goal>push</goal>-->
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dockerfile>Dockerfile</dockerfile>
+                    <repository>127.0.0.1:5000/${docker.image.prefix}/${project.artifactId}</repository>
+                    <!-- <tag>${project.version}</tag> 不指定tag默认为latest -->
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+            </plugin>
+
+
         </plugins>
     </build>
 
