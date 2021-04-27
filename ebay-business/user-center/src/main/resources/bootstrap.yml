@@ -20,4 +20,6 @@ eureka:
 security:
   oauth2:
     resource:
+      id: user-center
       user-info-uri: http://localhost:2300/user/info
+      prefer-token-info: false

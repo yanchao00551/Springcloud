@@ -9,8 +9,6 @@ spring:
       profile: dev
       uri: http://ebay-config-server
 
-
-
 #service discovery url
 eureka:
   client:
@@ -19,5 +17,32 @@ eureka:
     service-url:
       defaultZone: http://user:123@localhost:8260/eureka
 
+
+#zuul:
+#  sensitive-headers: Cookie,Set-Cookie
 zuul:
-  sensitive-headers: Cookie,Set-Cookie
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  routes:
+    uaa:
+      path: /uaa/**
+      sensitiveHeaders:
+      serviceId: ebay-security-oauth
+    user:
+      path: /user/**
+      sensitiveHeaders:
+      serviceId: user-center
+  add-proxy-headers: true
+
+oauth-server: http://localhost:2300
+
+security:
+  oauth2:
+    client:
+      access-token-uri: ${oauth-server}/oauth/token
+      user-authorization-uri: ${oauth-server}/oauth/authorize
+    resource:
+      prefer-token-info: false
+      user-info-uri: ${oauth-server}/uaa/user/info
+

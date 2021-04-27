@@ -22,7 +22,8 @@
         <module>ebay-zuul-gateway</module>
         <module>ebay-business</module>
         <module>ebay-hystrix-dashboard</module>
-        <module>ebay-security-oauth</module>
+        <module>ebay-security-oauth
+        </module>
     </modules>
 
 
