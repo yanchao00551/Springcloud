@@ -23,7 +23,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
  */
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true,securedEnabled = true,jsr250Enabled = true)
+@EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class OAuthWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
 
@@ -53,10 +53,8 @@ public class OAuthWebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("superAdmin")
                 .password(passwordEncoder.encode("123456"))
-                .roles("USER","ADMIN");
+                .roles("USER", "ADMIN");
     }
-
-
 
 
 }

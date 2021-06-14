@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestApiController {
 
     @PreAuthorize("hasRole('ADMIN')")
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String getUserById(@PathVariable String id){
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String getUserById(@PathVariable String id) {
         return "user: " + id;
     }
 }

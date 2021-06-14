@@ -1,0 +1,22 @@
+logging:
+  level.org.springframework: INFO
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot_jpa?charset=utf8mb4&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+      #hibernate:
+    #ddl-auto: create
+  activiti:
+    database-schema-update: true
+    history-level: full
+    db-history-used: true
+debug: true

@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * 由于在当前版本spring security自动开启了csrf，由于等会要
  * 创建的Eureka Client与Eureka Server端口不同产生了跨域问题，
  * 这里我们需要写一个配置类关闭csrf
+ *
  * @PackageName:com.ebaycloud.ebayeurekaserver
  * @ClassName:WebSecurityConfigurer
  * @Description:

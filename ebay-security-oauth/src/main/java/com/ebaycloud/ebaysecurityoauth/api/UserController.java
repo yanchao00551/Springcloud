@@ -24,23 +24,24 @@ public class UserController {
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/testrole")
-    public String testrole(){
+    public String testrole() {
         return "角色ROLE_ADMIN 可以查看";
     }
 
 
     /**
      * 获取认证用户相关信息的端点
+     *
+     * @param user
+     * @return java.util.Map<java.lang.String, java.lang.Object>
      * @author 悟空
      * @description //TODO
      * @date 21:38 2021/4/22
-     * @param user
-     * @return java.util.Map<java.lang.String, java.lang.Object>
      */
-    @RequestMapping(value = {"/info"},produces = "application/json")
-    public Map<String,Object> user(OAuth2Authentication user){
-        Map<String,Object> userInfo = new HashMap<>();
-        userInfo.put("user",user.getUserAuthentication().getPrincipal());
+    @RequestMapping(value = {"/info"}, produces = "application/json")
+    public Map<String, Object> user(OAuth2Authentication user) {
+        Map<String, Object> userInfo = new HashMap<>();
+        userInfo.put("user", user.getUserAuthentication().getPrincipal());
         userInfo.put("authorities", AuthorityUtils.authorityListToSet(
                 user.getUserAuthentication().getAuthorities()
         ));

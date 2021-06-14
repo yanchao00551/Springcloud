@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/member")
 public class RestApiController {
 
-    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public String getUserById(@PathVariable String id){
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String getUserById(@PathVariable String id) {
         return "member: " + id;
     }
 }
